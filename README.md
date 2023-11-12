@@ -1,5 +1,5 @@
 # Laboratory Work 1 (Provided by Alexander Solovkin - BSE223)
-Task:
+
 Создать перечисление GameResource (Humans, Food, Wood, Stone, Gold)
 
 Создать класс ResourceBank, отвечающий за ресурсы в игре. 
