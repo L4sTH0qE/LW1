@@ -12,7 +12,7 @@ namespace _Source.Core
       set
       {
         _value = value;
-        OnChanged?.Invoke(value);
+        OnChanged?.Invoke(this);
       }
     }
     

@@ -17,13 +17,13 @@ namespace _Source.Game
         {
             _gameResource = gameResource;
             resourceBank.GetResource(_gameResource).OnChanged += UpdateValue;
-            transform.position = new Vector3(0, (int)_gameResource);
+            transform.position = new Vector3(-4 + 2 * (int)_gameResource, 0);
             UpdateValue(resourceBank.GetResource(_gameResource).Value);
         }
 
-        private void UpdateValue(object value)
+        private void UpdateValue(object obj)
         {
-            _valueText.text = $"{value}";
+            _valueText.text = $"{obj}";
         }
     }
 }
