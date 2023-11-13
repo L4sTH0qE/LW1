@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using _Source.Core;
 using UnityEngine;
-
 
 namespace _Source.Game
 {
     public class GameManager : MonoBehaviour
     {
-        private ResourceBank _resourceBank;
+        private Core.ResourceBank _resourceBank;
         private void Awake()
         {
-            _resourceBank = new ResourceBank();
-            _resourceBank.ChangeResource(GameResource.Humans, 10);
-            _resourceBank.ChangeResource(GameResource.Food, 5);
-            _resourceBank.ChangeResource(GameResource.Wood, 5);
+            _resourceBank = new Core.ResourceBank();
+            _resourceBank.ChangeResource(Core.GameResource.Humans, 10);
+            _resourceBank.ChangeResource(Core.GameResource.Food, 5);
+            _resourceBank.ChangeResource(Core.GameResource.Wood, 5);
         }
     }
 }
