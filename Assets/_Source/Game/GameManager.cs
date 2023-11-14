@@ -10,15 +10,8 @@ namespace _Source.Game
         
         private Core.ResourceBank _resourceBank;
         
-        public ResourceBank ResourceBank
-        {
-            get
-            {
-                return _resourceBank;
-            }
-        }
+        public ResourceBank ResourceBank => _resourceBank;
         
-        //private ProductionBuilding _productionBuilding;
         private void Awake()
         {
             _resourceBank = new Core.ResourceBank();
