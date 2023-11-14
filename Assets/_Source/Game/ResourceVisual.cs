@@ -14,7 +14,14 @@ namespace _Source.Game
         {
             _gameResource = gameResource;
             resourceBank.GetResource(_gameResource).OnChanged += UpdateValue;
-            transform.position = new Vector3(-4 + 2 * (int)_gameResource, 0);
+            if ((int)_gameResource < 5)
+            {
+                transform.position = new Vector3(-4 + 2 * (int)_gameResource, -0.6f);
+            }
+            else
+            {
+                transform.position = new Vector3(-14 + 2 * (int)_gameResource, 0.6f);
+            }
             UpdateValue(resourceBank.GetResource(_gameResource).Value);
         }
 

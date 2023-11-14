@@ -19,5 +19,13 @@ namespace _Source.Game
       _gameManager.ResourceBank.ChangeResource((Core.GameResource)((transform.position.x + 4)/2), 1);
       _productionTime.StartTimer();
     }
+    
+    public void OnUpgradeLVL()
+    {
+      _gameManager.ResourceBank.ChangeResource((Core.GameResource)(5 + (transform.position.x + 4)/2), 1);
+      _productionTime.CooldownTime = _productionTime.ProdTime * Math.Max(0,
+        (1 - _gameManager.ResourceBank.GetResource((Core.GameResource)(5 + (transform.position.x + 4) / 2)).Value *
+          1.0f / 100));
+    }
   }
 }

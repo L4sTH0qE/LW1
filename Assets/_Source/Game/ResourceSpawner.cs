@@ -11,11 +11,10 @@ namespace _Source.Game
         public void Init(Core.ResourceBank resourceBank)
         {
             _resourceBank = resourceBank;
-            CreateResource(Core.GameResource.Humans);
-            CreateResource(Core.GameResource.Food);
-            CreateResource(Core.GameResource.Wood);
-            CreateResource(Core.GameResource.Stone);
-            CreateResource(Core.GameResource.Gold);
+            for (int i = 0; i < 10; ++i)
+            {
+                CreateResource((Core.GameResource)i);
+            }
         }
 
         private void CreateResource(Core.GameResource gameResource)
