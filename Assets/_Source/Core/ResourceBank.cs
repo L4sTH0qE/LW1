@@ -10,11 +10,10 @@ namespace _Source.Core
 
         public ResourceBank()
         {
-            _resourceBank.Add(GameResource.Humans, new ObservableInt(0));
-            _resourceBank.Add(GameResource.Food, new ObservableInt(0));
-            _resourceBank.Add(GameResource.Wood, new ObservableInt(0));
-            _resourceBank.Add(GameResource.Stone, new ObservableInt(0));
-            _resourceBank.Add(GameResource.Gold, new ObservableInt(0));
+            for (int i = 0; i < 10; ++i)
+            {
+                _resourceBank.Add(GameResource.Humans+i, new ObservableInt(0));
+            }
         }
         
         // Увеличивает значение ресурса r из словаря на v.

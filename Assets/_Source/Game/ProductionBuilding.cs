@@ -19,5 +19,10 @@ namespace _Source.Game
       _gameManager.ResourceBank.ChangeResource((Core.GameResource)((transform.position.x + 4)/2), 1);
       _productionTime.StartTimer();
     }
+    
+    public void OnUpgradeLVL()
+    {
+      _gameManager.ResourceBank.ChangeResource((Core.GameResource)(5 + (transform.position.x + 4)/2), 1);
+    }
   }
 }
