@@ -12,13 +12,17 @@ namespace _Source.Game
     private Slider _slider;
     
     public float CooldownTime { get; set; }
+    
+    public float ProdTime { get; set; }
+    
     public bool CanDoAction{ get; set; }
     public void StartTimer() => StartCoroutine(Cooldown());
     private void Start()
     {
+      ProdTime = 5;
       _slider.enabled = false;
       CanDoAction = true;
-      CooldownTime = 3;
+      CooldownTime = ProdTime;
     }
     private IEnumerator Cooldown()
     {
