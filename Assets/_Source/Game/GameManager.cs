@@ -1,3 +1,4 @@
+using _Source.Core;
 using UnityEngine;
 
 namespace _Source.Game
@@ -8,6 +9,16 @@ namespace _Source.Game
         private ResourceSpawner _resourceSpawner;
         
         private Core.ResourceBank _resourceBank;
+        
+        public ResourceBank ResourceBank
+        {
+            get
+            {
+                return _resourceBank;
+            }
+        }
+        
+        //private ProductionBuilding _productionBuilding;
         private void Awake()
         {
             _resourceBank = new Core.ResourceBank();
