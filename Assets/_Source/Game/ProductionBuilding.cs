@@ -9,10 +9,13 @@ namespace _Source.Game
   {
     [SerializeField]
     private GameManager _gameManager;
-
+    [SerializeField]
+    private ProductionTime _productionTime;
     public void OnButtonClicked()
     {
+      if (!_productionTime.CanDoAction) return;
       _gameManager.ResourceBank.ChangeResource((Core.GameResource)((transform.position.x + 4)/2), 1);
+      _productionTime.StartTimer();
     }
   }
 }
