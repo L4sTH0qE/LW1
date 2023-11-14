@@ -8,9 +8,6 @@ namespace _Source.Game
         [SerializeField] 
         private TextMeshProUGUI _valueText;
         
-        [SerializeField] 
-        private SpriteRenderer _spriteRenderer;
-        
         private Core.GameResource _gameResource;
         
         public void Init(Core.GameResource gameResource, Core.ResourceBank resourceBank)
